@@ -1,0 +1,35 @@
+{
+  "name": "get-grunt-tasks",
+  "version": "0.0.0",
+  "description": "Get the grunt tasks from a grunt project",
+  "license": "MIT",
+  "repository": "sindresorhus/get-grunt-tasks",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "pretest": "cd fixture && npm install",
+    "test": "node test.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "grunt",
+    "gruntfile",
+    "tasks",
+    "get",
+    "project"
+  ],
+  "dependencies": {
+    "grunt-cli": "^0.1.13"
+  },
+  "devDependencies": {
+    "ava": "0.0.4"
+  }
+}
