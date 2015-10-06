@@ -27,10 +27,17 @@
     "project"
   ],
   "dependencies": {
-    "grunt-cli": "^0.1.13"
+    "grunt-cli": "^0.1.13",
+    "pify": "^2.2.0",
+    "pinkie-promise": "^1.0.0"
   },
   "devDependencies": {
     "ava": "*",
     "xo": "*"
+  },
+  "xo": {
+    "ignores": [
+      "test.js"
+    ]
   }
 }

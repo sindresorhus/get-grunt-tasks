@@ -1,24 +1,21 @@
 'use strict';
 var childProcess = require('child_process');
+var pify = require('pify');
+var Promise = require('pinkie-promise');
 
-module.exports = function (pth, cb) {
+module.exports = function (pth) {
 	if (typeof pth !== 'string') {
-		cb = pth;
 		pth = process.cwd();
 	}
 
 	var gruntBinPath = require.resolve('grunt-cli/bin/grunt');
 
-	childProcess.execFile(gruntBinPath, ['--help', '--no-color'], {cwd: pth}, function (err, stdout) {
-		if (err) {
-			cb(err);
-			return;
-		}
+	return pify(childProcess.execFile, Promise)(gruntBinPath, ['--help', '--no-color'], {cwd: pth})
+		.then(function (stdout) {
+			var ret = /Available tasks([\s\S]+) \n\n/.exec(stdout);
 
-		var ret = /Available tasks([\s\S]+) \n\n/.exec(stdout);
-
-		cb(null, ret ? ret[1].trim().split('\n').map(function (el) {
-			return el.trim().split('  ')[0];
-		}) : []);
-	});
+			return ret ? ret[1].trim().split('\n').map(function (el) {
+				return el.trim().split('  ')[0];
+			}) : [];
+		});
 };

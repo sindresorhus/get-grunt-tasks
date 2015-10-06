@@ -26,7 +26,7 @@ You can get its tasks with:
 ```js
 const getGruntTasks = require('get-grunt-tasks');
 
-getGruntTasks('grunt-project', (err, tasks) => {
+getGruntTasks('grunt-project').then(tasks => {
 	console.log(tasks);
 	//=> ['default', 'test']
 });
@@ -35,7 +35,7 @@ getGruntTasks('grunt-project', (err, tasks) => {
 
 ## API
 
-### getGruntTasks([path], callback)
+### getGruntTasks([path])
 
 #### path
 
@@ -43,11 +43,6 @@ Type: `string`
 Default: `process.cwd()`
 
 Path to the directory of your grunt project.
-
-#### callback(err, tasks)
-
-*Required*  
-Type: `function`
 
 
 ## License
