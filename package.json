@@ -14,7 +14,7 @@
   },
   "scripts": {
     "pretest": "cd fixture && npm install",
-    "test": "node test.js"
+    "test": "xo && node test.js"
   },
   "files": [
     "index.js"
@@ -30,6 +30,7 @@
     "grunt-cli": "^0.1.13"
   },
   "devDependencies": {
-    "ava": "0.0.4"
+    "ava": "0.0.4",
+    "xo": "*"
   }
 }
