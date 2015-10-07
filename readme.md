@@ -37,6 +37,8 @@ getGruntTasks('grunt-project').then(tasks => {
 
 ### getGruntTasks([path])
 
+Returns a promise.
+
 #### path
 
 Type: `string`  
