@@ -15,7 +15,7 @@ $ npm install --save get-grunt-tasks
 Imagine a `gruntfile.js` in `./grunt-project`:
 
 ```js
-module.exports = function (grunt) {
+module.exports = grunt => {
 	grunt.registerTask('default');
 	grunt.registerTask('test');
 };
@@ -24,9 +24,9 @@ module.exports = function (grunt) {
 You can get its tasks with:
 
 ```js
-var getGruntTasks = require('get-grunt-tasks');
+const getGruntTasks = require('get-grunt-tasks');
 
-getGruntTasks('grunt-project', function (err, tasks) {
+getGruntTasks('grunt-project').then(tasks => {
 	console.log(tasks);
 	//=> ['default', 'test']
 });
@@ -35,7 +35,7 @@ getGruntTasks('grunt-project', function (err, tasks) {
 
 ## API
 
-### getGruntTasks([path], callback)
+### getGruntTasks([path])
 
 #### path
 
@@ -43,11 +43,6 @@ Type: `string`
 Default: `process.cwd()`
 
 Path to the directory of your grunt project.
-
-#### callback(err, tasks)
-
-*Required*  
-Type: `function`
 
 
 ## License

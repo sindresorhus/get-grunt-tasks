@@ -14,7 +14,7 @@
   },
   "scripts": {
     "pretest": "cd fixture && npm install",
-    "test": "node test.js"
+    "test": "xo && ava"
   },
   "files": [
     "index.js"
@@ -27,9 +27,17 @@
     "project"
   ],
   "dependencies": {
-    "grunt-cli": "^0.1.13"
+    "grunt-cli": "^0.1.13",
+    "pify": "^2.2.0",
+    "pinkie-promise": "^1.0.0"
   },
   "devDependencies": {
-    "ava": "0.0.4"
+    "ava": "*",
+    "xo": "*"
+  },
+  "xo": {
+    "ignores": [
+      "test.js"
+    ]
   }
 }
