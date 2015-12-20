@@ -9,8 +9,9 @@ module.exports = function (pth) {
 	}
 
 	var gruntBinPath = require.resolve('grunt-cli/bin/grunt');
+	var args = [gruntBinPath, '--help', '--no-color'];
 
-	return pify(childProcess.execFile, Promise)(gruntBinPath, ['--help', '--no-color'], {cwd: pth})
+	return pify(childProcess.execFile, Promise)(process.execPath, args, {cwd: pth})
 		.then(function (stdout) {
 			var ret = /Available tasks([\s\S]+) \n\n/.exec(stdout);
 
