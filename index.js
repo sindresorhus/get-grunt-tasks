@@ -8,7 +8,7 @@ module.exports = function (pth) {
 		pth = process.cwd();
 	}
 
-	var gruntBinPath = require.resolve('grunt-cli/bin/grunt');
+	var gruntBinPath = (process.platform === 'win32') ? require.resolve('.bin/grunt.cmd') : require.resolve('.bin/grunt');
 
 	return pify(childProcess.execFile, Promise)(gruntBinPath, ['--help', '--no-color'], {cwd: pth})
 		.then(function (stdout) {
