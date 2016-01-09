@@ -41,7 +41,7 @@ Returns a promise.
 
 #### path
 
-Type: `string`  
+Type: `string`<br>
 Default: `process.cwd()`
 
 Path to the directory of your grunt project.
