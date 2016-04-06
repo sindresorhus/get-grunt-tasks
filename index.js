@@ -1,7 +1,7 @@
 'use strict';
 const execa = require('execa');
 
-module.exports = function (cwd) {
+module.exports = cwd => {
 	if (typeof cwd !== 'string') {
 		cwd = process.cwd();
 	}

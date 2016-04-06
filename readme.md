@@ -49,4 +49,4 @@ Path to the directory of your grunt project.
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)
