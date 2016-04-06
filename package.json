@@ -1,6 +1,6 @@
 {
   "name": "get-grunt-tasks",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "Get the grunt tasks from a grunt project",
   "license": "MIT",
   "repository": "sindresorhus/get-grunt-tasks",
