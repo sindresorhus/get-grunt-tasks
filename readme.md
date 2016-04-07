@@ -1,14 +1,12 @@
-# get-grunt-tasks [![Build Status](https://travis-ci.org/sindresorhus/get-grunt-tasks.svg?branch=master)](https://travis-ci.org/sindresorhus/get-grunt-tasks)
+# get-grunt-tasks
 
-> Get the grunt tasks from a grunt project
-
+> Get the Grunt tasks from a Grunt project
 
 ## Install
 
+```sh
+npm install get-grunt-tasks
 ```
-$ npm install --save get-grunt-tasks
-```
-
 
 ## Usage
 
@@ -24,29 +22,21 @@ module.exports = grunt => {
 You can get its tasks with:
 
 ```js
-const getGruntTasks = require('get-grunt-tasks');
+import getGruntTasks from 'get-grunt-tasks';
 
-getGruntTasks('grunt-project').then(tasks => {
-	console.log(tasks);
-	//=> ['default', 'test']
-});
+console.log(await getGruntTasks('grunt-project'));
+//=> ['default', 'test']
 ```
-
 
 ## API
 
-### getGruntTasks([path])
+### getGruntTasks(path?)
 
-Returns a promise.
+Returns `Promise<string[]>` with the tasks.
 
 #### path
 
-Type: `string`<br>
+Type: `string`\
 Default: `process.cwd()`
 
-Path to the directory of your grunt project.
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)
+The path to the directory of your Grunt project.

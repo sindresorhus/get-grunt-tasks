@@ -1,7 +1,6 @@
-import path from 'path';
 import test from 'ava';
-import m from './';
+import getGruntTasks from './index.js';
 
-test(async t => {
-	t.same(await m(path.join(__dirname, 'fixture')), ['default', 'test']);
+test('main', async t => {
+	t.deepEqual(await getGruntTasks('fixture'), ['default', 'test']);
 });

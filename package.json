@@ -1,40 +1,40 @@
 {
-  "name": "get-grunt-tasks",
-  "version": "3.1.0",
-  "description": "Get the grunt tasks from a grunt project",
-  "license": "MIT",
-  "repository": "sindresorhus/get-grunt-tasks",
-  "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
-  },
-  "engines": {
-    "node": ">=4"
-  },
-  "scripts": {
-    "pretest": "cd fixture && npm install",
-    "test": "xo && ava"
-  },
-  "files": [
-    "index.js"
-  ],
-  "keywords": [
-    "grunt",
-    "gruntfile",
-    "tasks",
-    "get",
-    "project"
-  ],
-  "dependencies": {
-    "execa": "^0.2.1",
-    "grunt-cli": "^1.2.0"
-  },
-  "devDependencies": {
-    "ava": "*",
-    "xo": "*"
-  },
-  "xo": {
-    "esnext": true
-  }
+	"name": "get-grunt-tasks",
+	"version": "3.1.0",
+	"description": "Get the Grunt tasks from a grunt project",
+	"license": "MIT",
+	"repository": "sindresorhus/get-grunt-tasks",
+	"funding": "https://github.com/sponsors/sindresorhus",
+	"author": {
+		"name": "Sindre Sorhus",
+		"email": "sindresorhus@gmail.com",
+		"url": "https://sindresorhus.com"
+	},
+	"type": "module",
+	"exports": "./index.js",
+	"engines": {
+		"node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+	},
+	"scripts": {
+		"pretest": "cd fixture && npm install",
+		"test": "xo && ava"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"grunt",
+		"gruntfile",
+		"tasks",
+		"get",
+		"project"
+	],
+	"dependencies": {
+		"execa": "^5.1.1",
+		"grunt-cli": "^1.4.3"
+	},
+	"devDependencies": {
+		"ava": "^3.15.0",
+		"xo": "^0.45.0"
+	}
 }
