@@ -1,4 +1,4 @@
-# get-grunt-tasks [![Build Status](https://travis-ci.org/sindresorhus/get-grunt-tasks.svg?branch=master)](https://travis-ci.org/sindresorhus/get-grunt-tasks)
+# get-grunt-tasks
 
 > Get the grunt tasks from a grunt project
 
