@@ -30,11 +30,11 @@ console.log(await getGruntTasks('grunt-project'));
 
 ## API
 
-### getGruntTasks(path?)
+### getGruntTasks(cwd?)
 
-Returns `Promise<string[]>` with the tasks.
+Returns a `Promise<string[]>` with the tasks.
 
-#### path
+#### cwd
 
 Type: `string`\
 Default: `process.cwd()`
